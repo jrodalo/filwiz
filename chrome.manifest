@@ -1,0 +1,4 @@
+content     filwiz                     chrome/content/
+skin        filwiz       classic       chrome/skin/
+
+overlay     chrome://browser/content/browser.xul      chrome://filwiz/content/browserOverlay.xul

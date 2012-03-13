@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<overlay id="filwiz" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="filwiz.js" />
+
+	<popup id="contentAreaContextMenu">
+		<menu id="filwiz_menu" label="Rellenar con..." insertafter="context-reload">
+		    <menupopup id="filwiz_popup">
+				<menuitem id="filwiz_nif" label="NIF" oncommand="filwiz.generarNif();" />
+				<menuitem id="filwiz_cif" label="CIF" oncommand="filwiz.generarCif();" />
+				<menuitem id="filwiz_nie" label="NIE" oncommand="filwiz.generarNie();" />
+      			<menuseparator /> 
+				<menuitem id="filwiz_fecha" label="Fecha actual" oncommand="filwiz.generarFecha();" />
+			</menupopup>
+		</menu>
+	</popup>
+
+</overlay>
