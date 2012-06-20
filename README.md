@@ -6,6 +6,6 @@ Por ahora permite rellenar cualquier campo de texto con NIFs, CIFs y NIEs válid
 
 ![Filwiz-screenshot](https://github.com/jrodalo/filwiz/raw/master/filwiz-screenshot.png)
 
-¿Quieres que la extensión genere otros valores? Envíame un mensaje desde aquí: [https://github.com/jrodalo/filwiz/issues/new]()
+¿Quieres que la extensión genere otros valores? Envíame un mensaje desde aquí: [https://github.com/jrodalo/filwiz/issues/new](https://github.com/jrodalo/filwiz/issues/new)
 
 *En realidad es una excusa para probar Git y Github :)
