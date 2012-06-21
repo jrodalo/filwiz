@@ -1,7 +1,7 @@
 # Filwiz
 Extensión para Firefox que permite generar valores útiles en el desarrollo de aplicaciones web*.
 
-Por ahora permite rellenar cualquier campo de texto con NIFs, CIFs y NIEs válidos.
+Por ahora permite rellenar cualquier campo de texto con NIFs, CIFs, NIEs y tarjetas de crédito válidas.
 
 
 ![Filwiz-screenshot](https://github.com/jrodalo/filwiz/raw/master/filwiz-screenshot.png)
