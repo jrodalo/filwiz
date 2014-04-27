@@ -12,6 +12,6 @@ Por ahora permite rellenar cualquier campo de texto con NIFs, CIFs, NIEs y tarje
 
 ##Instalación
 
-1. Descarga la última versión: [filwiz-0.0.2.xpi](https://github.com/downloads/jrodalo/filwiz/filwiz-0.0.2.xpi)
+1. Descarga la última versión (filwiz-0.0.3.xpi)
 2. Arrastra el archivo a una ventana de Firefox.
 3. Acepta la instalación y reinicia el navegador.
