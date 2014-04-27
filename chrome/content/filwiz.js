@@ -82,6 +82,43 @@ var filwiz = {
 	},
 
 
+	/** Genera un nombre aleatorio */
+	generarNombre: function() {
+
+		var nombres = ["Adrián","Agustina","Agustín","Aimar","Aitor","Alba","Alejandro","Alex","Alicia","Álvaro","Ana","Andrés","Ane","Antonio","Beatriz","Benjamín","Carla","Carlos","Carlota","Carolina","Cecilia","Daniel","Daniela","David","Diego","Domingo","Eduardo","Elisa","Federico","Felix","Francisco","Gabriel","Gloria","Guillermo","Gustavo","Hugo","Iker","Isabel","Javier","Joaquín","Jose Luis","Jose","Juana","Judith","Julián","Júlia","Laura","Lucas","Luciana","Lucrecia","Lucía","Luis","Manuél","Marcelo","Mariana","Mario","Martina","María","Matías","Nicolás","Nieves","Nora","Pablo","Patricia","Pau","Paula","Priscila","Rocío","Samuel","Santiago","Sara","Sebastián","Sergio","Silvia","Sofía","Tania","Tomás","Unai","Victoria","Yasmina"];
+		var apellidos = ["Acosta","Aguirre","Alonso","Alvarado","Arias","Blanco","Campos","Castillo","Castro","Cubas","Delgado","Domínguez","Dorta","Díaz","Fajardo","Falcón","Fernández","Flores","García","Gil","Giménez","González","Gutiérrez","Gómez","Hernansanz","Hernández","Herrera","Iglesias","Jiménez","Juárez","Ledesma","Lemes","Lorenzo","López","Martín","Martínez","Marín","Medina","Molina","Montenegro","Morales","Moreno","Moyano","Muñoz","Navarro","Núñez","Ojeda","Ortega","Ortiz","Pérez","Ramos","Ramírez","Rodríguez","Rojas","Romero","Rubio","Ruiz","Ríos","Santana","Sanz","Serrano","Sosa","Soto","Suárez","Sánchez","Torres","Vilela","Villalba","Vázquez","Álvarez"];
+
+		var nombre = nombres[this.aleatorio(0, nombres.length - 1)];
+		var apellido = apellidos[this.aleatorio(0, apellidos.length - 1)] + " " + apellidos[this.aleatorio(0, apellidos.length - 1)];
+
+		this.setValue(nombre + " " + apellido);
+	},
+
+
+	/** Genera una palabra con un número de letras comprendido entre el mínimo y máximo indicado */
+	generarPalabra: function(min, max) {
+
+		var vocales = ['a', 'e', 'i', 'o', 'u'];
+		var consonantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'z'];
+		var cantidad = this.aleatorio(min, max);
+		var insertarVocal = this.aleatorio(0, 1) === 0;
+		var nombre = "";
+
+		for (var i=0; i<cantidad; i++) {
+
+			if (insertarVocal) {
+				nombre += vocales[this.aleatorio(0, vocales.length - 1)];
+				insertarVocal = false;
+			} else {
+				nombre += consonantes[this.aleatorio(0, consonantes.length - 1)];
+				insertarVocal = true;
+			}
+		}
+
+		this.setValue(nombre.charAt(0).toUpperCase() + nombre.slice(1));
+	},
+
+
 	/** Genera un numero con la longitud indicada */
 	generarNumeros: function(cantidad) {
 		var digitos = [];

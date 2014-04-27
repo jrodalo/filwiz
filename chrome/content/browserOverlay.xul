@@ -10,6 +10,9 @@
 				<menuitem id="filwiz_cif" label="CIF" oncommand="filwiz.generarCif();" />
 				<menuitem id="filwiz_nie" label="NIE" oncommand="filwiz.generarNie();" />
       			<menuseparator />
+      			<menuitem id="filwiz_palabra" label="Palabra aleatoria" oncommand="filwiz.generarPalabra(4, 8);" />
+      			<menuitem id="filwiz_nombre" label="Nombre aleatorio" oncommand="filwiz.generarNombre();" />
+      			<menuseparator />
       			<menuitem id="filwiz_visa" label="VISA" oncommand="filwiz.generarVisa();" />
       			<menuitem id="filwiz_mastercard" label="MASTERCARD" oncommand="filwiz.generarMastercard();" />
       			<menuseparator />
