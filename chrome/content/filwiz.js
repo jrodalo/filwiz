@@ -19,17 +19,18 @@ var filwiz = {
 
 	/** Genera un NIF aleatorio y lo introduce en el campo seleccionado */
 	generarNif: function() {
+
 		var numero = this.generarNumeros(8);
 		var posicionLetra = numero % 23;
 		var letra = this.obtenerLetraNif(posicionLetra);
 
 		this.setValue(numero + letra);
 	},
-	
+
 
 	/** Genera un CIF aleatorio y lo introduce en el campo seleccionado */
 	generarCif: function() {
-		
+
 		var numero = this.generarNumeros(7);
 		var pares = 0;
 		var impares = 0;
@@ -38,7 +39,7 @@ var filwiz = {
 		for (var i=1; i<7; i=i+2) {
 			pares += parseInt(numero.substr(i, 1), 10);
 		}
-		
+
 		for (var j=0; j<7; j=j+2) {
 			temp = (2 * parseInt(numero.substr(j, 1), 10)).toString() + "0";
 			impares += parseInt(temp.substr(0,1), 10) + parseInt(temp.substr(1,1), 10);
@@ -52,7 +53,7 @@ var filwiz = {
 		this.setValue("B" + numero + unumero);
 	},
 
-	
+
 	/** Genera un NIE aleatorio y lo introduce en el campo seleccionado */
 	generarNie: function() {
 		var numero = this.generarNumeros(7);
@@ -84,13 +85,20 @@ var filwiz = {
 	/** Genera un numero con la longitud indicada */
 	generarNumeros: function(cantidad) {
 		var digitos = [];
-		
+
 		for (var i=0; i<cantidad; i++) {
-			digitos[i] = parseInt(Math.random() * 10, 10);
+			digitos[i] = this.aleatorio(0, 9);
 		}
-		
+
 		return digitos.join("");
 	},
+
+
+	/** Genera un número aleatorio entre el mínimo y el máximo indicados */
+	aleatorio: function(min, max) {
+		return parseInt(Math.random() * (max - min + 1), 10) + min;
+	},
+
 
 
 	/** Retorna la letra asociada a la posición indicada */
